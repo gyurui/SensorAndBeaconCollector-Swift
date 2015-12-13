@@ -46,9 +46,9 @@ class ViewController: UIViewController {
     
     func getValues()
     {
-        accelerationXUILabel.text = "X:\(round(<#T##Double#>)(cbCentralManager.accelerometerData?.acceleration.x)!)"
-        accelerationYUILabel.text = "Y:\((cbCentralManager.accelerometerData?.acceleration.y)!)"
-        accelerationZUILabel.text = "Z:\((cbCentralManager.accelerometerData?.acceleration.z)!)"
+        accelerationXUILabel.text = "X:\(round((cbCentralManager.accelerometerData?.acceleration.x)!*1000)/1000)"
+        accelerationYUILabel.text = "Y:\(round((cbCentralManager.accelerometerData?.acceleration.y)!*1000)/1000)"
+        accelerationZUILabel.text = "Z:\(round((cbCentralManager.accelerometerData?.acceleration.z)!*1000)/1000)"
     }
 
 }
